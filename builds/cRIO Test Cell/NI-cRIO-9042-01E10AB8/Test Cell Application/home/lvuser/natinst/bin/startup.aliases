@@ -1,0 +1,8 @@
+[My Computer]
+My Computer="172.22.11.1"
+
+[NI-cRIO-9042-01E10AB8]
+NI-cRIO-9042-01E10AB8="localhost"
+
+[RT CompactRIO Target]
+RT CompactRIO Target="josh-9068"
