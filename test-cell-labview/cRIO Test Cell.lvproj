@@ -112,17 +112,17 @@
 			</Item>
 		</Item>
 	</Item>
-	<Item Name="NI-cRIO-9042-01E10AB8" Type="RT CompactRIO">
-		<Property Name="alias.name" Type="Str">NI-cRIO-9042-01E10AB8</Property>
-		<Property Name="alias.value" Type="Str">NI-cRIO-9042-01E10AB8</Property>
-		<Property Name="CCSymbols" Type="Str">TARGET_TYPE,RT;OS,Linux;CPU,x64;DeviceCode,78E8;</Property>
-		<Property Name="crio.ControllerPID" Type="Str">78E8</Property>
+	<Item Name="NI-cRIO-9049-01234567" Type="RT CompactRIO">
+		<Property Name="alias.name" Type="Str">NI-cRIO-9049-01234567</Property>
+		<Property Name="alias.value" Type="Str">NI-cRIO-9049-01234567</Property>
+		<Property Name="CCSymbols" Type="Str">TARGET_TYPE,RT;OS,Linux;CPU,x64;DeviceCode,78EA;</Property>
+		<Property Name="crio.ControllerPID" Type="Str">78EA</Property>
 		<Property Name="host.ResponsivenessCheckEnabled" Type="Bool">true</Property>
 		<Property Name="host.ResponsivenessCheckPingDelay" Type="UInt">5000</Property>
 		<Property Name="host.ResponsivenessCheckPingTimeout" Type="UInt">1000</Property>
 		<Property Name="host.TargetCPUID" Type="UInt">9</Property>
 		<Property Name="host.TargetOSID" Type="UInt">19</Property>
-		<Property Name="host.TargetUIEnabled" Type="Bool">false</Property>
+		<Property Name="host.TargetUIEnabled" Type="Bool">true</Property>
 		<Property Name="target.cleanupVisa" Type="Bool">false</Property>
 		<Property Name="target.FPProtocolGlobals_ControlTimeLimit" Type="Int">300</Property>
 		<Property Name="target.getDefault-&gt;WebServer.Port" Type="Int">80</Property>
@@ -500,7 +500,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{9359E835-663F-4DFF-A906-B0FCA4C7B1FA}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
-				<Property Name="Bld_version.build" Type="Int">21</Property>
+				<Property Name="Bld_version.build" Type="Int">23</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">startup.rtexe</Property>
 				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
@@ -514,7 +514,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Source[0].itemID" Type="Str">{5DF55E7D-D1AA-4AFB-8103-DB3AF0CFC327}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/NI-cRIO-9042-01E10AB8/cRIO Test Cell.vi</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/NI-cRIO-9049-01234567/cRIO Test Cell.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
 				<Property Name="SourceCount" Type="Int">2</Property>
@@ -528,15 +528,15 @@ AddOutputFilter chunkFilter
 				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
 			</Item>
 			<Item Name="Test Cell Package" Type="{CED73189-3D7D-4B2F-B6C9-EA03FBC59E14}">
-				<Property Name="IPK_lastBuiltPackage" Type="Str">crio-test-cell_19.0.0-13_x64.ipk</Property>
+				<Property Name="IPK_lastBuiltPackage" Type="Str">crio-test-cell_19.0.0-18_x64.ipk</Property>
 				<Property Name="IPK_startup.Restart" Type="Bool">true</Property>
 				<Property Name="IPK_startup.Target.Child" Type="Str">{6ADC43C1-82F7-4FA7-AC48-3DE1B7D15813}</Property>
 				<Property Name="IPK_startup.Target.Destination" Type="Str">root_0</Property>
-				<Property Name="IPK_startup.Target.Source" Type="Ref">/NI-cRIO-9042-01E10AB8/Build Specifications/Test Cell Application</Property>
+				<Property Name="IPK_startup.Target.Source" Type="Ref">/NI-cRIO-9049-01234567/Build Specifications/Test Cell Application</Property>
 				<Property Name="PKG_actions.Count" Type="Int">0</Property>
 				<Property Name="PKG_autoIncrementBuild" Type="Bool">true</Property>
 				<Property Name="PKG_autoSelectDeps" Type="Bool">false</Property>
-				<Property Name="PKG_buildNumber" Type="Int">17</Property>
+				<Property Name="PKG_buildNumber" Type="Int">19</Property>
 				<Property Name="PKG_buildSpecName" Type="Str">Test Cell Package</Property>
 				<Property Name="PKG_dependencies.Count" Type="Int">0</Property>
 				<Property Name="PKG_description" Type="Str"></Property>
@@ -546,7 +546,7 @@ AddOutputFilter chunkFilter
 				<Property Name="PKG_feedDescription" Type="Str"></Property>
 				<Property Name="PKG_feedName" Type="Str">cRIO Test Cell</Property>
 				<Property Name="PKG_homepage" Type="Str"></Property>
-				<Property Name="PKG_hostname" Type="Str">http://demo.systemlink.io</Property>
+				<Property Name="PKG_hostname" Type="Str">http://test.systemlink.io</Property>
 				<Property Name="PKG_lvrteTracking" Type="Bool">false</Property>
 				<Property Name="PKG_maintainer" Type="Str">National Instruments &lt;&gt;</Property>
 				<Property Name="PKG_output" Type="Path">../builds/NI_AB_PROJECTNAME/NI_AB_TARGETNAME/Test Cell Package</Property>
@@ -558,7 +558,7 @@ AddOutputFilter chunkFilter
 				<Property Name="PKG_shortcuts.Count" Type="Int">0</Property>
 				<Property Name="PKG_sources.Count" Type="Int">1</Property>
 				<Property Name="PKG_sources[0].Destination" Type="Str">root_0</Property>
-				<Property Name="PKG_sources[0].ID" Type="Ref">/NI-cRIO-9042-01E10AB8/Build Specifications/Test Cell Application</Property>
+				<Property Name="PKG_sources[0].ID" Type="Ref">/NI-cRIO-9049-01234567/Build Specifications/Test Cell Application</Property>
 				<Property Name="PKG_sources[0].Type" Type="Str">RTEXE Build</Property>
 				<Property Name="PKG_synopsis" Type="Str">Publishes tags for temperature and pressure and logs high speeed data to TDMS.</Property>
 				<Property Name="PKG_version" Type="Str">19.0.0</Property>

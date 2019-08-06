@@ -1,5 +1,5 @@
 [My Computer]
-My Computer="169.254.101.193"
+My Computer="172.22.11.1"
 
 [NI-cRIO-9049-01234567]
 NI-cRIO-9049-01234567="localhost"
