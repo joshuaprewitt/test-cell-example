@@ -3,44 +3,6 @@
   <Job OutputType="WebApplication">
     <CurrentBuildId>
       <ComponentSubtypeIdentifier>WebApplication</ComponentSubtypeIdentifier>
-      <BuildId>C:\Users\jprewitt\Documents\GitHub\test-cell-example\test-cell-webvi\Test Cell Web Application\Builds\WebApp_Web Server</BuildId>
-    </CurrentBuildId>
-    <RootBuildId>
-      <ComponentSubtypeIdentifier>WebApplication</ComponentSubtypeIdentifier>
-      <BuildId>C:\Users\jprewitt\Documents\GitHub\test-cell-example\test-cell-webvi\Test Cell Web Application\Builds\WebApp_Web Server</BuildId>
-    </RootBuildId>
-    <OutputPath>Builds\WebApp_Web Server</OutputPath>
-    <BuildName>WebApp</BuildName>
-    <State>Success</State>
-    <LastTotalTime>00:00:01</LastTotalTime>
-    <StartTime>2020-03-09T20:23:27.9804831Z</StartTime>
-    <HasChild>False</HasChild>
-    <IsStale>True</IsStale>
-    <QualifiedName></QualifiedName>
-    <HintEnvoy>::Web Server::Interactive::WebApp.gcomp</HintEnvoy>
-  </Job>
-  <Job OutputType="WebApplication">
-    <CurrentBuildId>
-      <ComponentSubtypeIdentifier>WebApplication</ComponentSubtypeIdentifier>
-      <BuildId>f07dcc03-343a-4e8c-b942-8984d82e77c1</BuildId>
-    </CurrentBuildId>
-    <RootBuildId>
-      <ComponentSubtypeIdentifier>WebApplication</ComponentSubtypeIdentifier>
-      <BuildId>f07dcc03-343a-4e8c-b942-8984d82e77c1</BuildId>
-    </RootBuildId>
-    <OutputPath>Builds\WebApp_Web Server</OutputPath>
-    <BuildName>WebApp</BuildName>
-    <State>Success</State>
-    <LastTotalTime>00:00:01</LastTotalTime>
-    <StartTime>2020-03-09T21:11:38.6944299Z</StartTime>
-    <HasChild>False</HasChild>
-    <IsStale>True</IsStale>
-    <QualifiedName></QualifiedName>
-    <HintEnvoy>::Web Server::Interactive::WebApp.gcomp</HintEnvoy>
-  </Job>
-  <Job OutputType="WebApplication">
-    <CurrentBuildId>
-      <ComponentSubtypeIdentifier>WebApplication</ComponentSubtypeIdentifier>
       <BuildId>a55abdbd-8139-4f24-992b-d7488d08559d</BuildId>
     </CurrentBuildId>
     <RootBuildId>
@@ -51,7 +13,26 @@
     <BuildName>WebApp</BuildName>
     <State>Success</State>
     <LastTotalTime>00:00:02</LastTotalTime>
-    <StartTime>2020-03-09T21:21:50.6747263Z</StartTime>
+    <StartTime>2020-03-09T21:30:57.6406535Z</StartTime>
+    <HasChild>False</HasChild>
+    <IsStale>True</IsStale>
+    <QualifiedName></QualifiedName>
+    <HintEnvoy>::Web Server::Interactive::WebApp.gcomp</HintEnvoy>
+  </Job>
+  <Job OutputType="WebApplication">
+    <CurrentBuildId>
+      <ComponentSubtypeIdentifier>WebApplication</ComponentSubtypeIdentifier>
+      <BuildId>2827978e-35f0-45e2-8ac9-c08dba3fac41</BuildId>
+    </CurrentBuildId>
+    <RootBuildId>
+      <ComponentSubtypeIdentifier>WebApplication</ComponentSubtypeIdentifier>
+      <BuildId>2827978e-35f0-45e2-8ac9-c08dba3fac41</BuildId>
+    </RootBuildId>
+    <OutputPath>Builds\WebApp_Web Server</OutputPath>
+    <BuildName>WebApp</BuildName>
+    <State>Success</State>
+    <LastTotalTime>00:00:01</LastTotalTime>
+    <StartTime>2020-03-09T21:33:47.0614594Z</StartTime>
     <HasChild>False</HasChild>
     <IsStale>False</IsStale>
     <QualifiedName>::Web Server::Interactive::WebApp.gcomp</QualifiedName>
