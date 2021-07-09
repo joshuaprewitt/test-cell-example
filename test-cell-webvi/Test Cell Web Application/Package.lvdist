@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SourceFile Checksum="3A1C82226EBE7F9734BF3468A87A64ABF83C83D88D7370AFAF73F7C277257ACE7120459169CB3E19BE1A367D01B1305181C5FF70EC733F53B44265544B4083D4" Timestamp="1D76EBC1B815879" xmlns="http://www.ni.com/PlatformFramework">
+<SourceFile Checksum="AB87071F94E3DDBBABAA945CC772C61E61174AE9CDC6A431306211B70D789C60596272AC42102675E394BDEB481258F5FD0AA390B5585F23094520C9D88E1146" Timestamp="1D7747529F0B015" xmlns="http://www.ni.com/PlatformFramework">
 	<SourceModelFeatureSet>
 		<ParsableNamespace AssemblyFileVersion="8.4.0.49575" FeatureSetName="GComponentFeatureSet" Name="http://www.ni.com/GComponent.xsd" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
 		<ParsableNamespace AssemblyFileVersion="8.4.0.49575" FeatureSetName="Editor" Name="http://www.ni.com/PlatformFramework" OldestCompatibleVersion="8.1.0.49152" Version="8.1.0.49152" />
 		<ApplicationVersionInfo Build="8.4.0.49575" Name="LabVIEW NXG" Version="5.1.0" />
 	</SourceModelFeatureSet>
-	<DistributionDefinition Company="National Instruments" Product="Test Cell" ShortDescription="National Instruments Test Cell Web Application" TargetedProduct="LabVIEW" Version="5.1.0.2" xmlns="http://www.ni.com/GComponent.xsd">
+	<DistributionDefinition Company="National Instruments" Product="Test Cell" ShortDescription="National Instruments Test Cell Web Application" TargetedProduct="LabVIEW" Version="5.1.0.3" xmlns="http://www.ni.com/GComponent.xsd">
 		<DistributionOutput CachedDisplayName="Package" Id="9b003651309d4d65acddd5b05a9d0508" OutputTypeIdentifier="DistributionOutputType:NiPackage" p3:CustomNipmPackageName="ni-test-cell" p3:DistributionCategory="Application" p3:MaintainerEmail="joshua.prewitt@ni.com" p3:MaintainerName="National Instruments" p3:PackageDisplayName="Test Cell" xmlns:p3="http://www.ni.com/GComponent.xsd" />
 		<DistributionBuildTarget Id="bfe6079d9c8c4c84b499cf640d5f2876" Target="::Web Server" />
 		<DistributionMemberDependencySource Id="242c593e9e1e4cd7a90e913fc489570c" MemberContentType="{http://www.ni.com/GComponent.xsd}Component_Rebuild" RootLocation="ApplicationFiles_64" Target="::Web Server::Interactive::WebApp.gcomp" />
