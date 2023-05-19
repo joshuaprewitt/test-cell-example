@@ -94,11 +94,11 @@
 			</Item>
 		</Item>
 	</Item>
-	<Item Name="NI-cRIO-9049-01234567" Type="RT CompactRIO">
-		<Property Name="alias.name" Type="Str">NI-cRIO-9049-01234567</Property>
-		<Property Name="alias.value" Type="Str">NI-cRIO-9049-01234567</Property>
-		<Property Name="CCSymbols" Type="Str">TARGET_TYPE,RT;OS,Linux;CPU,x64;DeviceCode,78EA;</Property>
-		<Property Name="crio.ControllerPID" Type="Str">78EA</Property>
+	<Item Name="Data Logger 3" Type="RT CompactRIO">
+		<Property Name="alias.name" Type="Str">Data Logger 3</Property>
+		<Property Name="alias.value" Type="Str">10.2.136.184</Property>
+		<Property Name="CCSymbols" Type="Str">TARGET_TYPE,RT;OS,Linux;CPU,x64;DeviceCode,78E8;</Property>
+		<Property Name="crio.ControllerPID" Type="Str">78E8</Property>
 		<Property Name="host.ResponsivenessCheckEnabled" Type="Bool">true</Property>
 		<Property Name="host.ResponsivenessCheckPingDelay" Type="UInt">5000</Property>
 		<Property Name="host.ResponsivenessCheckPingTimeout" Type="UInt">1000</Property>
@@ -641,7 +641,7 @@ AddOutputFilter chunkFilter
 						<Property Name="SupportDownload" Type="Bool">true</Property>
 						<Property Name="SupportResourceEstimation" Type="Bool">false</Property>
 						<Property Name="TargetName" Type="Str">FPGA Target</Property>
-						<Property Name="TopLevelVI" Type="Ref">/NI-cRIO-9049-01234567/Chassis/FPGA Target/FPGA.vi</Property>
+						<Property Name="TopLevelVI" Type="Ref">/Data Logger 3/Chassis/FPGA Target/FPGA.vi</Property>
 					</Item>
 				</Item>
 			</Item>
@@ -649,7 +649,7 @@ AddOutputFilter chunkFilter
 		<Item Name="cRIO Test Cell.vi" Type="VI" URL="../cRIO Test Cell.vi"/>
 		<Item Name="Logger.lvclass" Type="LVClass" URL="../logger/Logger.lvclass"/>
 		<Item Name="test.sh" Type="Document" URL="../test.sh"/>
-		<Item Name="Test.vi" Type="VI" URL="../../../../Test.vi"/>
+		<Item Name="Test.vi" Type="VI" URL="../../../../battery-tester/Cycle Test/Test.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="Check if File or Folder Exists.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/libraryn.llb/Check if File or Folder Exists.vi"/>
@@ -838,6 +838,7 @@ AddOutputFilter chunkFilter
 				<Item Name="NI Skyline Utilities Report Library Not Found Error.vi" Type="VI" URL="/&lt;vilib&gt;/Skyline/Utilities/NI Skyline Utilities Report Library Not Found Error.vi"/>
 				<Item Name="NI Skyline Utilities.lvlib" Type="Library" URL="/&lt;vilib&gt;/Skyline/Utilities/NI Skyline Utilities.lvlib"/>
 				<Item Name="NI Skyline Writable File.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Skyline/File/Writable File/NI Skyline Writable File.lvclass"/>
+				<Item Name="NI SystemLink Asset Utilization.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Skyline/AssetManagement/NI SystemLink Asset Utilization.lvclass"/>
 				<Item Name="NI SystemLink File Filter.lvlib" Type="Library" URL="/&lt;vilib&gt;/Skyline/File/Filter_Lib/NI SystemLink File Filter.lvlib"/>
 				<Item Name="NI SystemLink Named Value.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Skyline/TestMonitor/Named Value/NI SystemLink Named Value.lvclass"/>
 				<Item Name="NI SystemLink Test Monitor.lvlib" Type="Library" URL="/&lt;vilib&gt;/Skyline/TestMonitor/Shared/NI SystemLink Test Monitor.lvlib"/>
@@ -846,7 +847,10 @@ AddOutputFilter chunkFilter
 				<Item Name="NI SystemLink Test Step Query.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Skyline/TestMonitor/Test Step Query/NI SystemLink Test Step Query.lvclass"/>
 				<Item Name="NI SystemLink Test Step.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Skyline/TestMonitor/Test Step/NI SystemLink Test Step.lvclass"/>
 				<Item Name="NI SystemLink Workspace.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Skyline/Configuration/Workspace_class/NI SystemLink Workspace.lvclass"/>
+				<Item Name="NI_AALBase.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALBase.lvlib"/>
+				<Item Name="NI_AALPro.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALPro.lvlib"/>
 				<Item Name="NI_FileType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/lvfile.llb/NI_FileType.lvlib"/>
+				<Item Name="NI_MABase.lvlib" Type="Library" URL="/&lt;vilib&gt;/measure/NI_MABase.lvlib"/>
 				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
 				<Item Name="niSkylineFileIngestion.lvlib" Type="Library" URL="/&lt;vilib&gt;/Skyline/File/niSkylineFileIngestion.lvlib"/>
 				<Item Name="nisyscfg.lvlib" Type="Library" URL="/&lt;vilib&gt;/nisyscfg/nisyscfg.lvlib"/>
@@ -865,6 +869,8 @@ AddOutputFilter chunkFilter
 				<Item Name="WDT Number of Waveform Samples SGL.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/WDT Number of Waveform Samples SGL.vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
+			<Item Name="Energy and Capacity.vi" Type="VI" URL="../../../../battery-tester/Cycle Test/Energy and Capacity.vi"/>
+			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="nilvaiu.dll" Type="Document" URL="nilvaiu.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
@@ -890,7 +896,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{9359E835-663F-4DFF-A906-B0FCA4C7B1FA}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
-				<Property Name="Bld_version.build" Type="Int">33</Property>
+				<Property Name="Bld_version.build" Type="Int">36</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">startup.rtexe</Property>
 				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
@@ -904,7 +910,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Source[0].itemID" Type="Str">{77502043-9AB1-4F45-90FB-23F0E6FF4A14}</Property>
 				<Property Name="Source[0].type" Type="Str">Container</Property>
 				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
-				<Property Name="Source[1].itemID" Type="Ref">/NI-cRIO-9049-01234567/cRIO Test Cell.vi</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/Data Logger 3/cRIO Test Cell.vi</Property>
 				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
 				<Property Name="Source[1].type" Type="Str">VI</Property>
 				<Property Name="SourceCount" Type="Int">2</Property>
@@ -918,20 +924,20 @@ AddOutputFilter chunkFilter
 				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
 			</Item>
 			<Item Name="Test Cell Package" Type="{CED73189-3D7D-4B2F-B6C9-EA03FBC59E14}">
-				<Property Name="IPK_lastBuiltPackage" Type="Str">crio-test-cell_21.0.0-7_x64.ipk</Property>
+				<Property Name="IPK_lastBuiltPackage" Type="Str">crio-test-cell_21.0.0-10_x64.ipk</Property>
 				<Property Name="IPK_startup.Restart" Type="Bool">true</Property>
 				<Property Name="IPK_startup.Target.Child" Type="Str">{6ADC43C1-82F7-4FA7-AC48-3DE1B7D15813}</Property>
 				<Property Name="IPK_startup.Target.Destination" Type="Str">root_0</Property>
-				<Property Name="IPK_startup.Target.Source" Type="Ref">/NI-cRIO-9049-01234567/Build Specifications/Test Cell Application</Property>
+				<Property Name="IPK_startup.Target.Source" Type="Ref">/Data Logger 3/Build Specifications/Test Cell Application</Property>
 				<Property Name="PKG_actions.Count" Type="Int">1</Property>
 				<Property Name="PKG_actions[0].Arguments" Type="Str"></Property>
 				<Property Name="PKG_actions[0].IPK.IgnoreErrors" Type="Bool">false</Property>
-				<Property Name="PKG_actions[0].IPK.Inline.Script" Type="Ref">/NI-cRIO-9049-01234567/test.sh</Property>
+				<Property Name="PKG_actions[0].IPK.Inline.Script" Type="Ref">/Data Logger 3/test.sh</Property>
 				<Property Name="PKG_actions[0].IPK.Schedule" Type="Str">Post-install</Property>
 				<Property Name="PKG_actions[0].Type" Type="Str">IPK.InlineScript</Property>
 				<Property Name="PKG_autoIncrementBuild" Type="Bool">true</Property>
 				<Property Name="PKG_autoSelectDeps" Type="Bool">false</Property>
-				<Property Name="PKG_buildNumber" Type="Int">8</Property>
+				<Property Name="PKG_buildNumber" Type="Int">11</Property>
 				<Property Name="PKG_buildSpecName" Type="Str">Test Cell Package</Property>
 				<Property Name="PKG_dependencies.Count" Type="Int">7</Property>
 				<Property Name="PKG_dependencies[0].Enhanced" Type="Bool">false</Property>
@@ -1023,7 +1029,7 @@ AddOutputFilter chunkFilter
 				<Property Name="PKG_shortcuts.Count" Type="Int">0</Property>
 				<Property Name="PKG_sources.Count" Type="Int">1</Property>
 				<Property Name="PKG_sources[0].Destination" Type="Str">root_0</Property>
-				<Property Name="PKG_sources[0].ID" Type="Ref">/NI-cRIO-9049-01234567/Build Specifications/Test Cell Application</Property>
+				<Property Name="PKG_sources[0].ID" Type="Ref">/Data Logger 3/Build Specifications/Test Cell Application</Property>
 				<Property Name="PKG_sources[0].Type" Type="Str">RTEXE Build</Property>
 				<Property Name="PKG_synopsis" Type="Str">Publishes tags for temperature and pressure and logs high speeed data to TDMS.</Property>
 				<Property Name="PKG_version" Type="Str">21.0.0</Property>

@@ -1,0 +1,8 @@
+[Data Logger 3]
+Data Logger 3="localhost"
+
+[My Computer]
+My Computer="10.0.27.141"
+
+[RT CompactRIO Target]
+RT CompactRIO Target="josh-9068"
