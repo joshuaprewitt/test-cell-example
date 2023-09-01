@@ -1,0 +1,68 @@
+#! /bin/bash
+sh -c '#!/bin/bash -e
+# Check if a fresh install will overwrite existing files.
+# This check will be skipped when upgrading the package.
+case "$(/usr/local/natinst/bin/nirtcfg --file /etc/natinst/share/lvrt.conf --get section=LVRT,token=SkipBuiltIPKDeployCollisionCheck | tr '\''[[:upper:]]'\'' '\''[[:lower:]]'\'')" in
+true|1) exit 0 ;;
+esac
+case "$1" in
+upgrade|abort-upgrade) exit 0 ;;
+esac
+while read -r file; do
+    if [[ -e ${file} ]]; then
+        cat >&2 <<EOF
+The following file already exists on the target: ${file}
+Undeploy the application from the LabVIEW project and reinstall this package.
+EOF
+        exit 5
+    fi
+done <<"abort_postinst_EOF"
+/home/lvuser/natinst/bin/startup.aliases
+/home/lvuser/natinst/bin/startup.rtexe
+/home/lvuser/natinst/bin/data/nisyscfg.chm
+/home/lvuser/natinst/bin/project/errors/JSONtext-errors.txt
+/home/lvuser/natinst/bin/project/errors/VI-Analyzer-errors.txt
+/home/lvuser/natinst/bin/project/errors/ChineseS/Adaptive Filter VIs-errors.txt
+/home/lvuser/natinst/bin/project/errors/ChineseS/LabVIEW Elemental IO-errors.txt
+/home/lvuser/natinst/bin/project/errors/ChineseS/System Identification VIs-errors.txt
+/home/lvuser/natinst/bin/project/errors/ChineseS/Unit Test Framework-errors.txt
+/home/lvuser/natinst/bin/project/errors/English/Adaptive Filter VIs-errors.txt
+/home/lvuser/natinst/bin/project/errors/English/DataFinder-errors.txt
+/home/lvuser/natinst/bin/project/errors/English/Digital Filter Design Toolkit-errors.txt
+/home/lvuser/natinst/bin/project/errors/English/LabVIEW Elemental IO-errors.txt
+/home/lvuser/natinst/bin/project/errors/English/LV-RepGenForMSOffice-errors.txt
+/home/lvuser/natinst/bin/project/errors/English/System Identification VIs-errors.txt
+/home/lvuser/natinst/bin/project/errors/English/Time Frequency Analysis Toolkit-errors.txt
+/home/lvuser/natinst/bin/project/errors/English/Time Series Analysis Toolkit-errors.txt
+/home/lvuser/natinst/bin/project/errors/English/Unit Test Framework-errors.txt
+/home/lvuser/natinst/bin/project/errors/English/Wavelet Analysis Toolkit-errors.txt
+/home/lvuser/natinst/bin/project/errors/French/Adaptive Filter VIs-errors.txt
+/home/lvuser/natinst/bin/project/errors/French/DataFinder-errors.txt
+/home/lvuser/natinst/bin/project/errors/French/Digital Filter Design Toolkit-errors.txt
+/home/lvuser/natinst/bin/project/errors/French/LabVIEW Elemental IO-errors.txt
+/home/lvuser/natinst/bin/project/errors/French/System Identification VIs-errors.txt
+/home/lvuser/natinst/bin/project/errors/French/Time Frequency Analysis Toolkit-errors.txt
+/home/lvuser/natinst/bin/project/errors/French/Time Series Analysis Toolkit-errors.txt
+/home/lvuser/natinst/bin/project/errors/French/Unit Test Framework-errors.txt
+/home/lvuser/natinst/bin/project/errors/French/Wavelet Analysis Toolkit-errors.txt
+/home/lvuser/natinst/bin/project/errors/German/Adaptive Filter VIs-errors.txt
+/home/lvuser/natinst/bin/project/errors/German/DataFinder-errors.txt
+/home/lvuser/natinst/bin/project/errors/German/Digital Filter Design Toolkit-errors.txt
+/home/lvuser/natinst/bin/project/errors/German/LabVIEW Elemental IO-errors.txt
+/home/lvuser/natinst/bin/project/errors/German/System Identification VIs-errors.txt
+/home/lvuser/natinst/bin/project/errors/German/Time Frequency Analysis Toolkit-errors.txt
+/home/lvuser/natinst/bin/project/errors/German/Time Series Analysis Toolkit-errors.txt
+/home/lvuser/natinst/bin/project/errors/German/Unit Test Framework-errors.txt
+/home/lvuser/natinst/bin/project/errors/German/Wavelet Analysis Toolkit-errors.txt
+/home/lvuser/natinst/bin/project/errors/Japanese/Adaptive Filter VIs-errors.txt
+/home/lvuser/natinst/bin/project/errors/Japanese/DataFinder-errors.txt
+/home/lvuser/natinst/bin/project/errors/Japanese/Digital Filter Design Toolkit-errors.txt
+/home/lvuser/natinst/bin/project/errors/Japanese/LabVIEW Elemental IO-errors.txt
+/home/lvuser/natinst/bin/project/errors/Japanese/System Identification VIs-errors.txt
+/home/lvuser/natinst/bin/project/errors/Japanese/Time Frequency Analysis Toolkit-errors.txt
+/home/lvuser/natinst/bin/project/errors/Japanese/Time Series Analysis Toolkit-errors.txt
+/home/lvuser/natinst/bin/project/errors/Japanese/Unit Test Framework-errors.txt
+/home/lvuser/natinst/bin/project/errors/Japanese/Wavelet Analysis Toolkit-errors.txt
+/home/lvuser/natinst/bin/project/errors/Korean/System Identification VIs-errors.txt
+/home/lvuser/natinst/bin/project/errors/Korean/Unit Test Framework-errors.txt
+abort_postinst_EOF' "$0" "$1" || eval "echo 'Action \"Checking for conflicting files\" returned status $?'; exit $?"
