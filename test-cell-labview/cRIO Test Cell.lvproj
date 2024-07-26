@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='UTF-8'?>
-<Project Type="Project" LVVersion="23008000">
+<Project Type="Project" LVVersion="24008000">
 	<Item Name="My Computer" Type="My Computer">
 		<Property Name="server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="server.control.propertiesEnabled" Type="Bool">true</Property>
@@ -15,6 +15,7 @@
 		</Item>
 		<Item Name="Delete Logged Files.vi" Type="VI" URL="../Delete Logged Files.vi"/>
 		<Item Name="geo.vi" Type="VI" URL="../../../skyline-crio-logger/geo.vi"/>
+		<Item Name="Tag Test.vi" Type="VI" URL="../Tag Test.vi"/>
 		<Item Name="Tag Viewer.vi" Type="VI" URL="../Tag Viewer.vi"/>
 		<Item Name="Test Cell Client.vi" Type="VI" URL="../Test Cell Client.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
@@ -405,7 +406,6 @@ AddOutputFilter chunkFilter
 				<Item Name="NI Skyline Utilities Report Library Not Found Error.vi" Type="VI" URL="/&lt;vilib&gt;/Skyline/Utilities/NI Skyline Utilities Report Library Not Found Error.vi"/>
 				<Item Name="NI Skyline Utilities.lvlib" Type="Library" URL="/&lt;vilib&gt;/Skyline/Utilities/NI Skyline Utilities.lvlib"/>
 				<Item Name="NI Skyline Writable File.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Skyline/File/Writable File/NI Skyline Writable File.lvclass"/>
-				<Item Name="NI SystemLink Asset Utilization.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Skyline/AssetManagement/NI SystemLink Asset Utilization.lvclass"/>
 				<Item Name="NI SystemLink File Filter.lvlib" Type="Library" URL="/&lt;vilib&gt;/Skyline/File/Filter_Lib/NI SystemLink File Filter.lvlib"/>
 				<Item Name="NI SystemLink Named Value.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Skyline/TestMonitor/Named Value/NI SystemLink Named Value.lvclass"/>
 				<Item Name="NI SystemLink Test Monitor.lvlib" Type="Library" URL="/&lt;vilib&gt;/Skyline/TestMonitor/Shared/NI SystemLink Test Monitor.lvlib"/>
@@ -414,11 +414,8 @@ AddOutputFilter chunkFilter
 				<Item Name="NI SystemLink Test Step Query.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Skyline/TestMonitor/Test Step Query/NI SystemLink Test Step Query.lvclass"/>
 				<Item Name="NI SystemLink Test Step.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Skyline/TestMonitor/Test Step/NI SystemLink Test Step.lvclass"/>
 				<Item Name="NI SystemLink Workspace.lvclass" Type="LVClass" URL="/&lt;vilib&gt;/Skyline/Configuration/Workspace_class/NI SystemLink Workspace.lvclass"/>
-				<Item Name="NI_AALBase.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALBase.lvlib"/>
-				<Item Name="NI_AALPro.lvlib" Type="Library" URL="/&lt;vilib&gt;/Analysis/NI_AALPro.lvlib"/>
 				<Item Name="ni_emb.dll" Type="Document" URL="/&lt;vilib&gt;/ni_emb.dll"/>
 				<Item Name="NI_FileType.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/lvfile.llb/NI_FileType.lvlib"/>
-				<Item Name="NI_MABase.lvlib" Type="Library" URL="/&lt;vilib&gt;/measure/NI_MABase.lvlib"/>
 				<Item Name="NI_PackedLibraryUtility.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/LVLibp/NI_PackedLibraryUtility.lvlib"/>
 				<Item Name="NI_Real-Time Target Support.lvlib" Type="Library" URL="/&lt;vilib&gt;/NI_Real-Time Target Support.lvlib"/>
 				<Item Name="NI_SystemLogging.lvlib" Type="Library" URL="/&lt;vilib&gt;/Utility/SystemLogging/NI_SystemLogging.lvlib"/>
@@ -440,9 +437,7 @@ AddOutputFilter chunkFilter
 				<Item Name="WDT Number of Waveform Samples SGL.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/WDT Number of Waveform Samples SGL.vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 			</Item>
-			<Item Name="Energy and Capacity.vi" Type="VI" URL="../../../../battery-tester/Cycle Test/Energy and Capacity.vi"/>
 			<Item Name="LV Config Read String.vi" Type="VI" URL="/&lt;resource&gt;/dialog/lvconfig.llb/LV Config Read String.vi"/>
-			<Item Name="lvanlys.dll" Type="Document" URL="/&lt;resource&gt;/lvanlys.dll"/>
 			<Item Name="nilvaiu.dll" Type="Document" URL="nilvaiu.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
@@ -471,7 +466,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{9359E835-663F-4DFF-A906-B0FCA4C7B1FA}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
-				<Property Name="Bld_version.build" Type="Int">52</Property>
+				<Property Name="Bld_version.build" Type="Int">53</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">startup.rtexe</Property>
 				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
@@ -500,7 +495,7 @@ AddOutputFilter chunkFilter
 				<Property Name="TgtF_versionIndependent" Type="Bool">true</Property>
 			</Item>
 			<Item Name="Test Cell Package" Type="{CED73189-3D7D-4B2F-B6C9-EA03FBC59E14}">
-				<Property Name="IPK_lastBuiltPackage" Type="Str">crio-test-cell_23.1.1-1_x64.ipk</Property>
+				<Property Name="IPK_lastBuiltPackage" Type="Str">crio-test-cell_24.2.0-1_x64.ipk</Property>
 				<Property Name="IPK_startup.Restart" Type="Bool">true</Property>
 				<Property Name="IPK_startup.Target.Child" Type="Str">{6ADC43C1-82F7-4FA7-AC48-3DE1B7D15813}</Property>
 				<Property Name="IPK_startup.Target.Destination" Type="Str">root_0</Property>
@@ -549,7 +544,7 @@ AddOutputFilter chunkFilter
 				<Property Name="PKG_dependencies[3].Enhanced" Type="Bool">false</Property>
 				<Property Name="PKG_dependencies[3].MaxVersion" Type="Str"></Property>
 				<Property Name="PKG_dependencies[3].MaxVersionInclusive" Type="Bool">false</Property>
-				<Property Name="PKG_dependencies[3].MinVersion" Type="Str">23.0</Property>
+				<Property Name="PKG_dependencies[3].MinVersion" Type="Str">24.0</Property>
 				<Property Name="PKG_dependencies[3].MinVersionType" Type="Str">Inclusive</Property>
 				<Property Name="PKG_dependencies[3].Package.Name" Type="Str">ni-labview-realtime</Property>
 				<Property Name="PKG_dependencies[3].Package.Section" Type="Str"></Property>
@@ -608,7 +603,7 @@ AddOutputFilter chunkFilter
 				<Property Name="PKG_sources[0].ID" Type="Ref">/Data Logger 2/Build Specifications/Test Cell Application</Property>
 				<Property Name="PKG_sources[0].Type" Type="Str">RTEXE Build</Property>
 				<Property Name="PKG_synopsis" Type="Str">Publishes tags for temperature and pressure and logs high speeed data to TDMS.</Property>
-				<Property Name="PKG_version" Type="Str">23.1.1</Property>
+				<Property Name="PKG_version" Type="Str">24.2.0</Property>
 			</Item>
 		</Item>
 	</Item>

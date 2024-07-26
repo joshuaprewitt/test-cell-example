@@ -2,7 +2,7 @@
 Data Logger 2 = "10.2.136.183"
 
 [My Computer]
-My Computer = "10.0.27.141"
+My Computer = "10.0.59.156"
 
 [RT CompactRIO Target]
 RT CompactRIO Target = "josh-9068"
